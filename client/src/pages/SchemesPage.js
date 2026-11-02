@@ -46,6 +46,7 @@ export default function SchemesPage() {
 
   if (!hasData) return <div className="container"><EmptyState title="No household yet" cta="Set up your household" to="/household">We need your household details to check schemes.</EmptyState></div>;
   const { apps, money, nearMisses, eligibility, schemes } = analysis;
+  const recommendedPlan = analysis.plan.plans[0];
   const keys = (a) => new Set(a.apps.map((x) => x.key));
   const base = keys(analysis), simk = keys(sim);
   const gained = sim.apps.filter((a) => !base.has(a.key)), lost = analysis.apps.filter((a) => !simk.has(a.key));
@@ -59,8 +60,8 @@ export default function SchemesPage() {
 
   return (
     <div className="container">
-      <h1 className="page-title">Schemes you match</h1>
-      <p className="page-subtitle">Every result is a trace of fixed rules with an official source. AI reads documents; it never decides eligibility.</p>
+      <h1 className="page-title">Scheme eligibility &amp; prioritized benefit plan</h1>
+      <p className="page-subtitle">See which schemes may fit, why the rules matched, and which paperwork to fix first. AI reads documents; fixed rules evaluate eligibility.</p>
       <DemoBanner />
       <div className="money-strip">
         <div><b>{inr(money.perYearLeft)}</b><small>per year you could be claiming</small></div>
@@ -68,6 +69,20 @@ export default function SchemesPage() {
         <div><b>{money.readyCount}</b><small>ready to apply</small></div>
         <div><b>{money.blockedCount}</b><small>need a fix first</small></div>
       </div>
+      <section className="scheme-optimizer">
+        <div className="scheme-optimizer-heading">
+          <div><span className="section-kicker">DOCUMENT-UNLOCK OPTIMIZER</span><h2>Fix the most important things first</h2><p>Prioritized by the exact set of fixes that unlocks the greatest benefit in the current rule set.</p></div>
+          <Link to="/plan" className="btn btn-soft">Full readiness plan <span>→</span></Link>
+        </div>
+        {recommendedPlan ? (
+          <>
+            <div className="scheme-optimizer-summary">Fix <strong>{recommendedPlan.k} thing{recommendedPlan.k === 1 ? '' : 's'}</strong> to unlock <strong>{recommendedPlan.count} application{recommendedPlan.count === 1 ? '' : 's'}</strong> worth <strong>{inr(recommendedPlan.value)}</strong>.</div>
+            <div className="scheme-action-grid">
+              {recommendedPlan.actions.slice(0, 3).map((action, index) => <div className="scheme-action" key={action.key}><span>STEP {index + 1}</span><strong>{action.label}</strong><small>{action.who}</small></div>)}
+            </div>
+          </>
+        ) : <p className="scheme-optimizer-clear">No paperwork blockers found in the current eligible applications. Review the scheme rules and documents below before applying.</p>}
+      </section>
       {analysis.incomeNote && <div className="card warn-card">⚠️ {analysis.incomeNote}</div>}
 
       <h2 className="results-section-title">Eligible ({apps.length})</h2>
