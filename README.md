@@ -26,7 +26,7 @@ Most families don't miss benefits because they can't find the scheme. They miss 
 | 14 | **WhatsApp / missed-call mockup** driven by the real engine | `/channels` |
 | 15 | **Installable offline PWA** (service worker + manifest) | everywhere |
 
-Try it in 10 seconds: **Home → "Try the demo family"**.
+Start with your own household from **Home → Start a household**. The app does not prefill a family or documents; the inventory appears as you add records.
 
 ## Benchmark (held-out set, 440 labelled name pairs)
 
@@ -80,7 +80,7 @@ client/public     manifest.json · sw.js · icon.svg
 
 ## Suggested 2-minute demo
 
-1. Home → **Try the demo family**. 2. **Issues**: "Mohd Rafiq" vs "Mohammad Rafique", Zoya's swapped DOB; open a fix + scam shield + generate the letter. 3. **Plan**: ₹ left on the table, "fix 2 things → unlock 2 schemes". 4. **Schemes**: "Why do I match?" and the what-if slider. 5. **Dossier → Operator desk → Use my own dossier**. 6. **Benchmark** numbers.
+1. Home → **Start a household** and enter a household profile. 2. **Documents**: add a scan or enter document fields manually; only records you add appear in the inventory. 3. **Issues**: compare records and inspect suggested fixes. 4. **Schemes**: review rule-based matches and the what-if controls. 5. **Plan**: inspect readiness and document actions. 6. **Dossier → Operator desk** to try the handoff flow.
 
 ## Team
 | Member | Branch |

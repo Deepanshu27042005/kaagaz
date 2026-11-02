@@ -1,83 +1,123 @@
-import React, { useMemo } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { useHousehold } from '../context/HouseholdContext';
-import { demoState } from '../data/demo';
-import { analyze } from '../engine/analyze';
-import { inr } from '../components/common/bits';
+import { docLabel } from '../data/docTypes';
+import { inr, ScoreRing } from '../components/common/bits';
 
 const STEPS = [
-  ['🎙️', 'Speak', 'Answer a few questions in Hindi or English. We build a profile of the whole household.'],
-  ['📷', 'Scan', 'Photograph documents or upload PDFs. Text is read on the phone; only extracted fields are kept.'],
-  ['🔎', 'Catch mismatches', 'Fuzzy, transliteration-aware matching finds "Mohd Rafiq" vs "Mohammad Rafique" before the counter does.'],
-  ['⚖️', 'Check eligibility', 'A transparent rules engine matches each person to schemes and shows why, with the official source.'],
-  ['🧩', 'Unlock the most', 'The optimizer finds the fewest fixes that unlock the most benefit.'],
-  ['📲', 'Hand off', 'A QR dossier lets the CSC operator pre-fill forms. Works offline.'],
-];
-const NOT_CHATGPT = [
-  ['Remembers the household', 'Profiles, documents and deadlines persist on the device.'],
-  ['Deterministic and auditable', 'Rules are versioned JSON with sources. No confident guessing.'],
-  ['Reads real scans privately', 'OCR runs in the browser. Documents are never uploaded.'],
-  ['Works offline, by voice', 'Built as an installable PWA for low connectivity and low literacy.'],
-  ['Produces something an operator can use', 'A verifiable QR dossier, fix letters and a checklist.'],
+  ['01', 'Family profile', 'Add household members and the details needed for a first benefits check.', '♧'],
+  ['02', 'Scan / upload', 'Read identity and supporting documents locally in your browser.', '▣'],
+  ['03', 'Mismatch radar', 'Review name, date-of-birth and expiry issues before you apply.', '⌁'],
+  ['04', 'Operator dossier', 'Prepare a useful case summary and QR handoff for an assisted visit.', '▦'],
 ];
 
 export default function HomePage() {
-  const { loadDemo } = useHousehold();
-  const navigate = useNavigate();
-  const preview = useMemo(() => { const T = new Date(); const s = demoState(T); return { a: analyze(s, T), s }; }, []);
-  const { a } = preview;
-  const best = a.plan.plans.find((p) => p.k === 2) || a.plan.plans[a.plan.plans.length - 1];
-  const start = () => { loadDemo(); navigate('/plan'); };
+  const { state, hasData, analysis } = useHousehold();
+  const household = state;
+  const head = household.members.find((member) => member.isHead) || household.members[0];
+  const activeIssues = analysis.issues.filter((issue) => !issue.advisory);
+  const ready = analysis.apps.filter((app) => app.state === 'ready' && !app.alternativeTo);
+  const blocked = analysis.apps.filter((app) => app.state === 'blocked' && !app.alternativeTo);
+  const readiness = analysis.apps.length
+    ? Math.round(analysis.apps.reduce((total, app) => total + app.readiness, 0) / analysis.apps.length)
+    : 0;
+  const firstIssue = activeIssues[0];
+  const location = [household.household.district, household.household.state].filter(Boolean).join(', ');
+  const memberCount = hasData ? household.members.length : 0;
 
   return (
-    <div className="home-page">
-      <section className="hero">
-        <div className="hero-badge">📄 KaagazSaathi · Build for Bharat 2026</div>
-        <h1 className="hero-headline">We stop benefit claims from failing<br /><span className="hero-highlight">before the citizen reaches the counter.</span></h1>
-        <p className="hero-sub">
-          Most families do not miss benefits because they cannot find the scheme. They miss them because one name is spelled two ways, a date is swapped, or a certificate expired.
-          KaagazSaathi finds those problems first, and tells you exactly how to fix them.
-        </p>
-        <div className="hero-actions">
-          <button className="btn btn-primary" onClick={start}>▶ Try the demo family</button>
-          <Link to="/household" className="btn btn-outline">Start with my household →</Link>
-        </div>
-
-        <div className="hero-demo-card card" aria-label="Live example from the engine">
-          <div className="demo-card-title">Live output for the demo family (fictional data)</div>
-          <div className="demo-row"><span className="demo-label">Aadhaar vs passbook</span><span className="demo-value">"Mohd Rafiq" vs "Mohammad Rafique"</span><span className="badge badge-review">Spelling variant</span></div>
-          <div className="demo-row"><span className="demo-label">Zoya's date of birth</span><span className="demo-value">04/12/2005 vs 12/04/2005</span><span className="badge badge-missing">DD/MM swapped</span></div>
-          <div className="demo-row"><span className="demo-label">Income certificate</span><span className="demo-value">Issued 14 months ago</span><span className="badge badge-mismatch">Expired</span></div>
-          <div className="hero-kpis">
-            <div><b>{inr(a.money.perYearLeft)}</b><small>per year unclaimed</small></div>
-            <div><b>{inr(a.money.oneTimeLeft)}</b><small>one-time unclaimed</small></div>
-            {best && <div><b>Fix {best.k} things</b><small>unlock {best.count} schemes · {inr(best.value)}</small></div>}
+    <div className="home-page dashboard-page">
+      <section className="dashboard-hero">
+        <div className="dashboard-copy">
+          <div className="eyebrow"><span className="eyebrow-mark">✳</span> CIVIC READINESS ENGINE <span className="privacy-inline">100% local · No cloud uploads</span></div>
+          <h1>Prepare your family’s documents before visiting the counter</h1>
+          <p>Catch paperwork issues early, understand which benefits may fit, and see exactly what to do next.</p>
+          <div className="dashboard-actions">
+            {hasData
+              ? <Link to="/documents" className="btn btn-primary">Review documents <span>→</span></Link>
+              : <Link to="/household" className="btn btn-primary">Set up my household <span>→</span></Link>}
+            <Link to={hasData ? '/household' : '/documents'} className="btn btn-soft">{hasData ? 'Edit household profile' : 'Add a document'} <span>↗</span></Link>
           </div>
         </div>
+        <aside className="security-audit">
+          <div className="security-audit-top"><span className="security-seal">✓</span><span className="status-dot" /> DEVICE SECURITY</div>
+          <strong>Privacy shield active</strong>
+          <p>Document reading runs on this device. Original scans are not uploaded to a server.</p>
+          <span className="security-foot">On-device OCR · Offline-ready</span>
+        </aside>
       </section>
 
-      <section className="section">
-        <h2 className="section-title">How it works</h2>
-        <div className="how-grid">
-          {STEPS.map(([icon, title, desc], i) => (
-            <div key={title} className="how-card card"><div className="how-icon">{icon}</div><div className="how-num">Step {i + 1}</div><div className="how-title">{title}</div><p className="how-desc">{desc}</p></div>
+      <section className="dashboard-section">
+        <div className="section-heading">
+          <div><span className="section-kicker">YOUR PREPARATION FLOW</span><h2>How KaagazSaathi pre-screens your case</h2></div>
+          <span className="section-caption">4 simple preparation steps</span>
+        </div>
+        <div className="step-grid">
+          {STEPS.map(([number, title, description, icon]) => (
+            <article className="step-card" key={number}>
+              <div className="step-card-top"><span>{number}</span><i aria-hidden="true">{icon}</i></div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+              <span className="step-card-state">{number === '03' && activeIssues.length ? `${activeIssues.length} review item${activeIssues.length === 1 ? '' : 's'}` : 'Ready when you are'}</span>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="section">
-        <h2 className="section-title">Why a chatbot cannot do this</h2>
-        <div className="why-grid">
-          {NOT_CHATGPT.map(([t, d]) => (<div key={t} className="card why-card"><b>✔ {t}</b><p>{d}</p></div>))}
+      <section className="dashboard-section">
+        <div className="section-heading assessment-heading">
+          <div><span className="section-kicker">ACTIVE ASSESSMENT</span><h2>{head?.name ? `${head.name.split(' ')[0]} household readiness` : 'Household benefits readiness'}</h2><p>{location || 'Add your district and state'} · {memberCount} registered member{memberCount === 1 ? '' : 's'}</p></div>
         </div>
+
+        <div className="assessment-grid">
+          <article className="metric-card"><div className="metric-label"><span>Ready schemes</span><i className="metric-icon positive">✓</i></div><strong>{ready.length} active</strong><small>{inr(analysis.money.perYearReady)} / year ready to apply</small><div className="metric-track"><span style={{ width: `${analysis.apps.length ? Math.max(8, Math.round((ready.length / analysis.apps.length) * 100)) : 0}%` }} /></div></article>
+          <article className="metric-card"><div className="metric-label"><span>Blocked schemes</span><i className="metric-icon pending">⌁</i></div><strong className="metric-amber">{blocked.length} need a fix</strong><small>{inr(analysis.money.perYearBlocked)} / year pending paperwork</small><div className="metric-track amber"><span style={{ width: `${analysis.apps.length ? Math.max(8, Math.round((blocked.length / analysis.apps.length) * 100)) : 0}%` }} /></div></article>
+          <article className="metric-card"><div className="metric-label"><span>Document issues</span><i className="metric-icon alert">!</i></div><strong className="metric-red">{activeIssues.length} to review</strong><small>Name or date differences to check</small><div className="metric-track red"><span style={{ width: `${activeIssues.length ? Math.min(100, activeIssues.length * 22) : 0}%` }} /></div></article>
+          <article className="metric-card readiness-card"><div className="metric-label"><span>Readiness gauge</span><i className="metric-icon blue">◌</i></div><div className="readiness-value"><strong>{readiness}%</strong><ScoreRing value={readiness} size={58} /></div><small>Based on the current rule set</small><span className="metric-note">Transparent checklist · no AI decisions</span></article>
+        </div>
+
+        {firstIssue ? (
+          <article className="priority-card">
+            <span className="priority-icon">!</span>
+            <div className="priority-copy"><span className="priority-tag">HIGH-IMPACT REVIEW</span><h3>{firstIssue.memberName}’s {firstIssue.field === 'dob' ? 'date of birth' : 'name'} needs a document check</h3><p>{firstIssue.reasons[0]} Review the comparison and suggested correction steps before applying.</p></div>
+            <Link to="/issues" className="btn btn-primary">Review mismatches <span>→</span></Link>
+          </article>
+        ) : (
+          <article className="priority-card priority-clear">
+            <span className="priority-icon">✓</span>
+            <div className="priority-copy"><span className="priority-tag">DOCUMENT CHECK</span><h3>No high-priority mismatches found</h3><p>Keep adding household documents to check more fields against each other.</p></div>
+            <Link to="/documents" className="btn btn-primary">Open documents <span>→</span></Link>
+          </article>
+        )}
       </section>
 
-      <section className="section principles-section">
-        <h2 className="section-title">Responsible by design</h2>
-        <div className="principles-row">
-          {['🔒 Consent first', '🕶️ Aadhaar reduced to last 4 digits', '📵 Documents never uploaded', '👤 "Human verify" on low-confidence reads', '🔗 Every verdict cites a source', '⚖️ AI never decides eligibility'].map((p) => (<div key={p} className="principle-chip">{p}</div>))}
+      {hasData ? <section className="dashboard-section inventory-section">
+        <div className="section-heading">
+          <div><span className="section-kicker">HOUSEHOLD DOCUMENT INVENTORY</span><h2>Family members & document health</h2><p>{household.members.length} enrolled members · {household.documents.length} documents added</p></div>
+          <Link to="/dossier" className="btn btn-soft">Prepare operator dossier <span>↗</span></Link>
         </div>
-        <p className="principles-note">Honest limits: browser speech recognition may send audio to the browser vendor (offline Vosk/Whisper is the production plan), and the bundled scheme rules are demo values pending human verification.</p>
+        <div className="member-grid">
+          {household.members.map((member) => {
+            const memberDocs = household.documents.filter((document) => document.memberId === member.id);
+            const memberIssues = activeIssues.filter((issue) => issue.memberId === member.id).length;
+            return (
+              <article className="member-card" key={member.id}>
+                <div className="member-card-heading"><span className="member-avatar">{(member.name || member.relation || '?').slice(0, 1)}</span><div><strong>{member.name || member.relation}</strong><small>{member.relation}{member.age ? ` · ${member.age} yrs` : ''}</small></div><span className={`member-state ${memberIssues || !memberDocs.length ? 'needs-review' : 'verified'}`}>{memberIssues ? `${memberIssues} to review` : memberDocs.length ? 'No mismatch' : 'No docs yet'}</span></div>
+                <div className="member-doc-list">
+                  {memberDocs.length ? memberDocs.slice(0, 4).map((document) => (
+                    <span className={`member-doc-chip ${analysis.verify.some((field) => field.docId === document.id) ? 'verify-chip' : ''}`} key={document.id}><i>{analysis.verify.some((field) => field.docId === document.id) ? '!' : '✓'}</i>{docLabel(document.type)}</span>
+                  )) : <span className="muted small">No documents added yet</span>}
+                </div>
+                <div className="member-card-footer"><span>{memberDocs.length} document{memberDocs.length === 1 ? '' : 's'}</span><Link to="/documents">Review files →</Link></div>
+              </article>
+            );
+          })}
+        </div>
+      </section> : <section className="dashboard-section empty-household-card"><span className="section-kicker">GET STARTED</span><h2>No household documents have been added</h2><p>Set up a household, then add documents yourself. The document list stays empty until you add a scan or enter details.</p><div className="dashboard-actions"><Link to="/household" className="btn btn-primary">Set up household <span>→</span></Link><Link to="/documents" className="btn btn-soft">Open document scan</Link></div></section>}
+
+      <section className="local-scan-banner">
+        <div><span className="section-kicker">ON-DEVICE OCR</span><h2>Verify a document privately</h2><p>Choose an image or PDF. OCR runs locally in your browser; you review the extracted fields before saving.</p><span className="local-scan-points">✓ No cloud upload <span>·</span> ✓ Human review for uncertain reads <span>·</span> ✓ Aadhaar reduced to last 4 digits</span></div>
+        <Link to="/documents" className="btn btn-primary">Go to document scan <span>→</span></Link>
       </section>
     </div>
   );

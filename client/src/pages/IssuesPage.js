@@ -78,8 +78,8 @@ export default function IssuesPage() {
   const by = (arr) => members.map((m) => ({ m, list: arr.filter((i) => i.memberId === m.id) })).filter((g) => g.list.length);
   return (
     <div className="container">
-      <h1 className="page-title">Mismatch detector</h1>
-      <p className="page-subtitle">Documents are compared on name and date of birth, using spelling-, script- and format-aware matching. Each difference is explained and comes with a fix path.</p>
+      <h1 className="page-title">Document mismatches &amp; practical corrections</h1>
+      <p className="page-subtitle">Compare records side by side, understand what the mismatch could affect, and get a clear correction path with the supporting documents to bring.</p>
 
       <div className="summary-banner banner-warning">
         <div className="summary-status"><span className="summary-icon">{real.length ? '⚠️' : '✅'}</span><span className="summary-label">{real.length ? `${real.length} issue${real.length > 1 ? 's' : ''} to fix` : 'No mismatches found'}</span></div>
