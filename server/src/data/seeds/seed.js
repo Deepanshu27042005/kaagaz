@@ -1,16 +1,13 @@
-/**
- * Seed script — inserts sample services and rules into MongoDB.
- * Run with: npm run seed  (from the server/ directory)
- *
- * WARNING: This will drop and recreate the Service and Rule collections.
- */
-require('dotenv').config({ path: require('path').join(__dirname, '../../..', '.env') });
+const path = require('path');
+require('dotenv').config({
+  path: path.resolve(__dirname, '../../../.env')
+});
+console.log('Env file:', path.resolve(__dirname, '../../../.env'));
+console.log('MONGODB_URI loaded:', Boolean(process.env.MONGODB_URI));
 const mongoose = require('mongoose');
 const Service = require('../../models/Service');
 const Rule = require('../../models/Rule');
-
 const connectDB = require('../../config/db');
-
 const SERVICES = [
   {
     slug: 'ration-card',

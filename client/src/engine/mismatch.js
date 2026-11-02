@@ -1,7 +1,16 @@
-// Cross-document mismatch detector (the core of KaagazSaathi).
-// For each person, every document is compared against a reference (Aadhaar if present)
-// on name and date of birth. Each issue carries the evidence, a plain-language reason,
-// the document that should be corrected, and the fix path.
+
+/**
+ * KaagazSaathi — Cross-document mismatch detector.
+ *
+ * Checks:
+ * 1. Document name against the household member's profile name.
+ * 2. Names across Aadhaar and other documents.
+ * 3. Dates of birth across documents.
+ *
+ * The detector does not modify documents automatically.
+ * It creates issues for the user to review.
+ */
+
 import { compareNames } from './names.js';
 import { compareDates } from './dates.js';
 import { fixFor } from '../data/docTypes.js';
@@ -11,54 +20,244 @@ const FIELDS = [
   { key: 'dob', cmp: compareDates },
 ];
 
-export const LEVEL_WEIGHT = { ok: 0, minor: 6, major: 15, conflict: 25 };
+export const LEVEL_WEIGHT = {
+  ok: 0,
+  minor: 6,
+  major: 15,
+  conflict: 25,
+};
+
+function hasValue(value) {
+  return (
+    value !== null &&
+    value !== undefined &&
+    String(value).trim() !== ''
+  );
+}
+
+function normalizeValue(value) {
+  return String(value || '').trim();
+}
+
+function makeIssue({
+  member,
+  field,
+  result,
+  reference,
+  document,
+  target,
+}) {
+  const fix = fixFor(target.type, field);
+
+  return {
+    id: `${member.id}:${field}:${reference.id}:${document.id}`,
+
+    memberId: member.id,
+    memberName: member.name,
+
+    field,
+    kind: result.kind,
+    level: result.level,
+    score: result.score ?? null,
+
+    advisory: result.kind === 'year_only',
+
+    reasons: result.reasons || [],
+
+    docs: [
+      {
+        id: reference.id,
+        type: reference.type,
+        value: reference.fields?.[field] || '',
+      },
+      {
+        id: document.id,
+        type: document.type,
+        value: document.fields?.[field] || '',
+      },
+    ],
+
+    targetDocId: target.id,
+    targetType: target.type,
+
+    fix,
+  };
+}
 
 export function detectIssues(members, documents) {
   const issues = [];
-  for (const m of members) {
-    const docs = documents.filter((d) => d.memberId === m.id);
-    for (const F of FIELDS) {
-      const withField = docs.filter((d) => String(d.fields?.[F.key] || '').trim());
-      if (withField.length < 2) continue;
-      const ref = withField.find((d) => d.type === 'aadhaar') || withField[0];
-      const others = withField.filter((d) => d !== ref);
-      const results = others.map((o) => ({ o, r: F.cmp(ref.fields[F.key], o.fields[F.key]) })).filter((x) => x.r.level !== 'ok');
 
-      // If two or more other documents agree with each other but all disagree with the reference,
-      // the reference is the odd one out, so it is the one to correct.
-      let referenceIsOdd = false;
-      if (others.length >= 2 && results.length === others.length) {
-        referenceIsOdd = others.slice(1).every((o) => F.cmp(others[0].fields[F.key], o.fields[F.key]).level === 'ok');
+  for (const member of members) {
+    const memberDocuments = documents.filter(
+      (document) => document.memberId === member.id
+    );
+
+    if (!memberDocuments.length) continue;
+
+    /*
+     * CHECK 1:
+     * Compare each document against the household profile.
+     *
+     * This catches an incorrect Aadhaar name even when no
+     * second document has been uploaded.
+     */
+    for (const document of memberDocuments) {
+      for (const field of FIELDS) {
+        const documentValue = document.fields?.[field.key];
+
+        if (!hasValue(documentValue)) continue;
+
+        const profileValue =
+          field.key === 'name'
+            ? member.name
+            : member.dob;
+
+        if (!hasValue(profileValue)) continue;
+
+        const result = field.cmp(
+          normalizeValue(profileValue),
+          normalizeValue(documentValue)
+        );
+
+        if (result.level === 'ok') continue;
+
+        const reference = {
+          id: `profile-${member.id}`,
+          type: 'profile',
+          fields: {
+            [field.key]: profileValue,
+          },
+        };
+
+        issues.push(
+          makeIssue({
+            member,
+            field: field.key,
+            result,
+            reference,
+            document,
+            target: document,
+          })
+        );
       }
+    }
 
-      for (const { o, r } of results) {
-        const target = referenceIsOdd ? ref : o;
-        const fix = fixFor(target.type, F.key);
-        issues.push({
-          id: `${m.id}:${F.key}:${ref.id}:${o.id}`,
-          memberId: m.id, memberName: m.name, field: F.key,
-          kind: r.kind, level: r.level, score: r.score ?? null, advisory: r.kind === 'year_only',
-          reasons: r.reasons,
-          docs: [
-            { id: ref.id, type: ref.type, value: ref.fields[F.key] },
-            { id: o.id, type: o.type, value: o.fields[F.key] },
-          ],
-          targetDocId: target.id, targetType: target.type,
-          fix,
+    /*
+     * CHECK 2:
+     * Compare documents against Aadhaar when available.
+     * Otherwise use the first document containing the field.
+     */
+    for (const field of FIELDS) {
+      const withField = memberDocuments.filter(
+        (document) =>
+          hasValue(document.fields?.[field.key])
+      );
+
+      if (withField.length < 2) continue;
+
+      const reference =
+        withField.find(
+          (document) => document.type === 'aadhaar'
+        ) || withField[0];
+
+      const others = withField.filter(
+        (document) => document.id !== reference.id
+      );
+
+      const results = others.map((document) => ({
+        document,
+        result: field.cmp(
+          normalizeValue(reference.fields[field.key]),
+          normalizeValue(document.fields[field.key])
+        ),
+      }));
+
+      const mismatches = results.filter(
+        ({ result }) => result.level !== 'ok'
+      );
+
+      if (!mismatches.length) continue;
+
+      /*
+       * If all other documents agree with each other,
+       * the reference may be the incorrect document.
+       */
+      const referenceIsOdd =
+        others.length >= 2 &&
+        mismatches.length === others.length &&
+        others.slice(1).every(
+          (document) =>
+            field.cmp(
+              normalizeValue(others[0].fields[field.key]),
+              normalizeValue(document.fields[field.key])
+            ).level === 'ok'
+        );
+
+      for (const { document, result } of mismatches) {
+        const target = referenceIsOdd
+          ? reference
+          : document;
+
+        issues.push(
+          makeIssue({
+            member,
+            field: field.key,
+            result,
+            reference,
+            document,
+            target,
+          })
+        );
+      }
+    }
+  }
+
+  // Avoid duplicate issues generated by profile and document checks.
+  const uniqueIssues = new Map();
+
+  for (const issue of issues) {
+    const key = [
+      issue.memberId,
+      issue.field,
+      issue.targetDocId,
+      issue.docs.map((document) => document.id).sort().join(':'),
+    ].join('|');
+
+    if (!uniqueIssues.has(key)) {
+      uniqueIssues.set(key, issue);
+    }
+  }
+
+  return [...uniqueIssues.values()];
+}
+
+/**
+ * Fields extracted with low confidence require human verification.
+ */
+export function lowConfidenceFields(
+  documents,
+  threshold = 0.75
+) {
+  const out = [];
+
+  for (const document of documents) {
+    for (const [field, confidence] of Object.entries(
+      document.confidence || {}
+    )) {
+      if (
+        confidence < threshold &&
+        hasValue(document.fields?.[field])
+      ) {
+        out.push({
+          docId: document.id,
+          type: document.type,
+          field,
+          confidence,
+          value: document.fields[field],
         });
       }
     }
   }
-  return issues;
-}
 
-// Fields extracted with low confidence get a "human verify" label instead of silent acceptance
-export function lowConfidenceFields(documents, threshold = 0.75) {
-  const out = [];
-  for (const d of documents) {
-    for (const [k, c] of Object.entries(d.confidence || {})) {
-      if (c < threshold && d.fields?.[k]) out.push({ docId: d.id, type: d.type, field: k, confidence: c, value: d.fields[k] });
-    }
-  }
   return out;
 }

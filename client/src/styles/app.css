@@ -210,3 +210,14 @@ code { background: var(--color-primary-light); padding: 1px 6px; border-radius: 
   .letter { position: absolute; left: 0; top: 0; width: 100%; border: none; }
   .no-print { display: none !important; }
 }
+/* Keep active navigation text readable */
+.navbar-step.active,
+.navbar-step.active:hover,
+.navbar-step.active:focus-visible {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.navbar-step.active {
+  text-decoration: none;
+}
