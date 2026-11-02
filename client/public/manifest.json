@@ -1,0 +1,12 @@
+{
+  "short_name": "KaagazSaathi",
+  "name": "KaagazSaathi: paperwork co-pilot",
+  "description": "Find and fix paperwork problems before they get your benefit claim rejected.",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1a56db",
+  "background_color": "#f7f9ff",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

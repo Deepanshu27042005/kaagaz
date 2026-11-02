@@ -1,0 +1,6 @@
+node_modules/
+build/
+.env
+/public/tesseract/
+/public/pdf.worker.min.js
+/public/pdf.worker.min.mjs

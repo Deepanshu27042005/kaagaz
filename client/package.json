@@ -1,0 +1,35 @@
+{
+  "name": "kaagazsaathi-client",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "pdfjs-dist": "4.10.38",
+    "qrcode.react": "^4.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "tesseract.js": "^5.1.0"
+  },
+  "scripts": {
+    "prestart": "node scripts/copy-ocr-assets.js",
+    "start": "react-scripts start",
+    "prebuild": "node scripts/copy-ocr-assets.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "benchmark:generate": "node src/tools/generateBenchmark.mjs 2026 src/data/benchmark.json"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

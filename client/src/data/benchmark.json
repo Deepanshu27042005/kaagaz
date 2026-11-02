@@ -1,0 +1,2646 @@
+{
+ "seed": 2026,
+ "count": 440,
+ "pairs": [
+  {
+   "cat": "missing_part",
+   "a": "Lalit Lal Qureshi",
+   "b": "Lalit Qureshi",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Mukesh Chand Qureshi",
+   "b": "Mukesh Chad Qureshi",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Javed Yadav",
+   "b": "Manoj Yadav",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Dinesh Devi Yadav",
+   "b": "Dinesh Devi Jadhav",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Shanti Devi Gupta",
+   "b": "Pankaj Devi Gupta",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Savita Chand Pandey",
+   "b": "Savita Chsnd Pandey",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "नेहा गुप्ता",
+   "b": "Pooja Gupta",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Salim Chauhan",
+   "b": "Md. Salim Chauhan",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Zoya Prasad Saxena",
+   "b": "Zoya Prasad Sethi",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "रोहित वर्मा",
+   "b": "Asha Verma",
+   "same": false
+  },
+  {
+   "cat": "initial",
+   "a": "Rahul Chand Yadav",
+   "b": "R. C. Yadav",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Radha Kumar Jain",
+   "b": "R. K. Jain",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Imran Chand Sharma",
+   "b": "Irfan Chand Sharma",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Suresh Kumar Kapoor",
+   "b": "Ashok Rathore",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "विजय गुप्ता",
+   "b": "Priya Gupta",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Sachin Prasad Ansari",
+   "b": "Sachin Prasad Ansarl",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Neha Lal Saxena",
+   "b": "Vijay Lal Saxena",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Parveen Devi Saxena",
+   "b": "Parveen Devi Sethi",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Seema Joshi",
+   "b": "Seema  Joshi",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Ramesh Lal Qureshi",
+   "b": "Suresh Lal Qureshi",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Rahul Chand Mishra",
+   "b": "Rahul Chand Mehra",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Manoj Chand Kapoor",
+   "b": "Sanjay Chand Kapoor",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Anil Kumar Singh",
+   "b": "Anil Kumar Sinha",
+   "same": false
+  },
+  {
+   "cat": "honorific",
+   "a": "Smt. Shahida Kumar Chauhan",
+   "b": "Shahida Kumar Chauhan",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Ramesh Prasad Joshi",
+   "b": "Ramesh  Prasad  Joshi",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Aslam Prasad Tiwari",
+   "b": "Asalam Prasad Tiwari",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Vijay Lal Gupta",
+   "b": "Vijai Lal Gupta",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Pooja Lal Sharma",
+   "b": "Pooja Lal Sharmaa",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Harish Siddiqui",
+   "b": "Harish  Siddiqui",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "उषा गुप्ता",
+   "b": "Ramesh Gupta",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Anita Patel",
+   "b": "Shabana Patel",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Sunil Gupta",
+   "b": "Deepak Gupta",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Sunil Chand Saxena",
+   "b": "Sunil Chand Sethi",
+   "same": false
+  },
+  {
+   "cat": "initial",
+   "a": "Savita Lal Sharma",
+   "b": "Savita L Sharma",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Ramesh Siddiqui",
+   "b": "Manju Siddiqui",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "कविता पांडेय",
+   "b": "Kavita Pandey",
+   "same": true
+  },
+  {
+   "cat": "missing_part",
+   "a": "Deepak Kumar Siddiqui",
+   "b": "Deepak Siddiqui",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Meena Kumar Patel",
+   "b": "M Kumar Patel",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Rukhsana Jain",
+   "b": "Rukhsaana Jain",
+   "same": true
+  },
+  {
+   "cat": "honorific",
+   "a": "Mr. Anil Devi Ansari",
+   "b": "Anil Devi Ansari",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Mukesh Kumar Gupta",
+   "b": "Naresh Kumar Gupta",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Vijay Chand Khan",
+   "b": "Vijay Chand Kapoor",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Savita Devi Tiwari",
+   "b": "Asif Chand Qureshi",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Rukhsana Yadav",
+   "b": "Md Rukhsana Yadav",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Kamal Chand Singh",
+   "b": "Kamla Pandey",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Gita Devi Pandey",
+   "b": "Javed Devi Pandey",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Sanjay Devi Qureshi",
+   "b": "Sanjay Deui Qureshi",
+   "same": true
+  },
+  {
+   "cat": "honorific",
+   "a": "Shri Shabana Rathore",
+   "b": "Shabana Rathore",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rekha Lal Gupta",
+   "b": "Reena Lal Gupta",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Pooja Lal Gupta",
+   "b": "Puja Lal Gupta",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Babita Devi Khan",
+   "b": "Sita Devi Khan",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Sanjay Chand Verma",
+   "b": "Riya Chand Verma",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Manju Tiwari",
+   "b": "Parveen Tiwari",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Kamal Gupta",
+   "b": "Komal Gupta",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Sunil Patel",
+   "b": "Anil Patel",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Imran Lal Jain",
+   "b": "Irfan Lal Jain",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Manju Chand Joshi",
+   "b": "Manju Joshi",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Ramesh Rathore",
+   "b": "Vijay Kumar Singh",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "मुकेश कुमार यादव",
+   "b": "Mukesh Kumar Yadav",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Shabana Gupta",
+   "b": "Mohammed Shabana Gupta",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Zoya Lal Kapoor",
+   "b": "Ashok Rathore",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Savita Jain",
+   "b": "Asif Jain",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Manju Patel",
+   "b": "Manju Patil",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Harish Prasad Mishra",
+   "b": "Harish Mishra",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Anita Prasad Pandey",
+   "b": "Babita Chand Singh",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Sunita Yadav",
+   "b": "Sunita Yadaw",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Neha Kumar Kapoor",
+   "b": "Nisha Kumar Kapoor",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Asha Chand Patel",
+   "b": "Asha Patel",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Irfan Prasad Jain",
+   "b": "Irfan Paasad Jain",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Priya Lal Jain",
+   "b": "Pria Lal Jain",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Parveen Joshi",
+   "b": "Parvin Joshi",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Farhan Lal Mishra",
+   "b": "Farhan Lal Mehra",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Mohan Lal Verma",
+   "b": "Salim Lal Verma",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Kavita Prasad Joshi",
+   "b": "Savita Prasad Joshi",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Zoya Kumar Pandey",
+   "b": "Parveen Chand Chauhan",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Aslam Jain",
+   "b": "Mohamad Aslam Jain",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Riya Devi Saxena",
+   "b": "Riya Devi Sethi",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Rajesh Kumar Chauhan",
+   "b": "Rajesh Chauhan",
+   "same": true
+  },
+  {
+   "cat": "honorific",
+   "a": "Shri Naresh Kapoor",
+   "b": "Naresh Kapoor",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Rekha Devi Joshi",
+   "b": "Joshi Rekha Devi",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Neha Devi Jain",
+   "b": "Neha Devi Jaine",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Amit Yadav",
+   "b": "Amit Jadhav",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Amit Prasad Gupta",
+   "b": "Naresh Prasad Gupta",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "रेखा वर्मा",
+   "b": "Meena Verma",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "रेखा सिंह",
+   "b": "Rekha Singh",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "अनिल शर्मा",
+   "b": "Rohit Sharma",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Rakesh Kumar Yadav",
+   "b": "Rakesh Kumar Jadhav",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Suresh Gupta",
+   "b": "Mukesh Gupta",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Sunil Chand Agarwal",
+   "b": "Pooja Chand Agarwal",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Dinesh Siddiqui",
+   "b": "Dinesh Sidtiqui",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Zoya Chand Qureshi",
+   "b": "Farhan Kumar Saxena",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Shabana Mishra",
+   "b": "Shabaana Mishra",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "उषा यादव",
+   "b": "Radha Yadav",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Amit Prasad Saxena",
+   "b": "Vikram Chand Singh",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Parveen Yadav",
+   "b": "Md Parveen Yadav",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Ashok Siddiqui",
+   "b": "Deepak Kumar Joshi",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "राजेश चौहान",
+   "b": "Rajesh Chauhan",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Nasreen Devi Yadav",
+   "b": "Vikram Devi Yadav",
+   "same": false
+  },
+  {
+   "cat": "reordered",
+   "a": "Neha Lal Jain",
+   "b": "Jain, Neha Lal",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Rekha Devi Siddiqui",
+   "b": "Rkha Devi Siddiqui",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Krishna Kapoor",
+   "b": "Krishnaa Kapoor",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Ramesh Pandey",
+   "b": "Laxmi Pandey",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Arun Lal Yadav",
+   "b": "Arun Lal Jadhav",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Sanjay Kumar Singh",
+   "b": "Sanjay Kumar Slngh",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Priya Prasad Khan",
+   "b": "Priya Prasad Kapoor",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Rafiq Yadav",
+   "b": "Muhammad Rafiq Yadav",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Naresh Kumar Sharma",
+   "b": "Naresh K Sharma",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rahul Devi Agarwal",
+   "b": "Rekha Yadav",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Rajesh Chand Verma",
+   "b": "Rajesh Chand Vcrma",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Asha Tiwari",
+   "b": "ASHA TIWARI",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Aslam Jain",
+   "b": "Mohd Aslam Jain",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Laxmi Devi Rathore",
+   "b": "Rathore Laxmi Devi",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "मनोज कुमार पांडेय",
+   "b": "Manoj Kumar Pandey",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Naresh Chand Ansari",
+   "b": "Ansari, Naresh Chand",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "प्रिया देवी चौहान",
+   "b": "Priya Devi Chauhan",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Kamal Devi Singh",
+   "b": "Kamal Devi. Singh",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Gita Prasad Mishra",
+   "b": "Glta Prasad Mishra",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Ajay Devi Verma",
+   "b": "Pankaj Kumar Yadav",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Arun Kumar Agarwal",
+   "b": "Manju Kumar Agarwal",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Aslam Verma",
+   "b": "Md. Aslam Verma",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Imran Tiwari",
+   "b": "Imraan Tiwari",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Kavita Prasad Joshi",
+   "b": "Irfan Khan",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rohit Devi Singh",
+   "b": "Rahul Devi Singh",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Shanti Kumar Gupta",
+   "b": "Shanti Kumar Gvpta",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Ajay Devi Mishra",
+   "b": "AJAY DEVI MISHRA",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Aslam Singh",
+   "b": "Mohamad Aslam Singh",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Harish Kumar Tiwari",
+   "b": "Harih Kumar Tiwari",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Sita Devi Tiwari",
+   "b": "Sita D Tiwari",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Pankaj Devi Gupta",
+   "b": "Salim Prasad Kapoor",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Vikram Yadav",
+   "b": "Pooja Yadav",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Anil Chand Tiwari",
+   "b": "Anil Chand Tiwsri",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Parveen Siddiqui",
+   "b": "Sanjay Siddiqui",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Vijay Prasad Saxena",
+   "b": "Anil Yadav",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Farhan Devi Ansari",
+   "b": "Farhan Deui Ansari",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Mukesh Chand Mishra",
+   "b": "Mukesh Chand Mlshra",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Salim Chand Sharma",
+   "b": "Saiim Chand Sharma",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rukhsana Lal Agarwal",
+   "b": "Rohan Devi Qureshi",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Irfan Mishra",
+   "b": "Irfan Mlshra",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "मीना गुप्ता",
+   "b": "Rohit Gupta",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Usha Mishra",
+   "b": "Usha Mehra",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rahul Pandey",
+   "b": "Shabana Chand Pandey",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Lalit Prasad Khan",
+   "b": "Lalit Prasad Kapoor",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Amit Chand Siddiqui",
+   "b": "Amit Siddiqui",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "विजय तिवारी",
+   "b": "Vijay Tiwari",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Ashok Prasad Verma",
+   "b": "Ashok Prasad Vrma",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Javed Devi Mishra",
+   "b": "Suresh Devi Mishra",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Kavita Patel",
+   "b": "Savita Patel",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "मीना वर्मा",
+   "b": "Rakesh Verma",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Manju Lal Singh",
+   "b": "Manju Singh",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Salim Patel",
+   "b": "Mohamad Salim Patel",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Vijay Singh",
+   "b": "Seema Ansari",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Javed Joshi",
+   "b": "JAVED JOSHI",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "मीना पांडेय",
+   "b": "Meena Pandey",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Neha Chand Rathore",
+   "b": "N Chand Rathore",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Rukhsana Tiwari",
+   "b": "Rukhsana Trivedi",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Farhan Ansari",
+   "b": "Rafiq Prasad Siddiqui",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Shabana Ansari",
+   "b": "Muhammad Shabana Ansari",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Kavita Gupta",
+   "b": "Savita Gupta",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Shanti Lal Jain",
+   "b": "Farhan Lal Jain",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rahul Kumar Saxena",
+   "b": "Rukhsana Prasad Qureshi",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Rohit Chand Khan",
+   "b": "Rohit Chnd Khan",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Asha Chand Chauhan",
+   "b": "Chauhan Asha Chand",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Rekha Kumar Pandey",
+   "b": "Javed Kumar Pandey",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Mohan Lal Sharma",
+   "b": "Mohan Lal. Sharma",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Sita Devi Chauhan",
+   "b": "Aslam Devi Chauhan",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Rekha Kumar Yadav",
+   "b": "Rekha Yadav",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Vikram Prasad Saxena",
+   "b": "Saxena, Vikram Prasad",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Kamla Chand Patel",
+   "b": "Patel, Kamla Chand",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rohit Devi Khan",
+   "b": "Rahul Devi Khan",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Meena Patel",
+   "b": "Rajesh Patel",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Mohan Kumar Khan",
+   "b": "Rohan Kumar Khan",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "अमित कुमार जोशी",
+   "b": "Amit Kumar Joshi",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Naresh Devi Sharma",
+   "b": "Naresh Devi Verma",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "मीना सिंह",
+   "b": "Rahul Singh",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Rahul Kapoor",
+   "b": "Rahul Kpoor",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Vikram Kumar Khan",
+   "b": "Arun Chand Mishra",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Mukesh Yadav",
+   "b": "Parveen Chand Mishra",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rafiq Verma",
+   "b": "Sarita Chand Singh",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Nasreen Agarwal",
+   "b": "Md Nasreen Agarwal",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Poonam Lal Mishra",
+   "b": "Anil Kumar Yadav",
+   "same": false
+  },
+  {
+   "cat": "honorific",
+   "a": "Smt. Sachin Devi Rathore",
+   "b": "Sachin Devi Rathore",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Manju Prasad Yadav",
+   "b": "Manjv Prasad Yadav",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Sunil Devi Mishra",
+   "b": "Neha Lal Verma",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "लक्ष्मी शर्मा",
+   "b": "Dinesh Sharma",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Sachin Lal Verma",
+   "b": "Sachin Verma",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Priya Lal Saxena",
+   "b": "Riya Lal Saxena",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Seema Sharma",
+   "b": "Scema Sharma",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Babita Prasad Sharma",
+   "b": "Babita P Sharma",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Shahida Devi Verma",
+   "b": "Sarita Devi Tiwari",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Anil Prasad Gupta",
+   "b": "ANIL PRASAD GUPTA",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Shabana Prasad Patel",
+   "b": "Shabaana Prasad Patel",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Sita Lal Verma",
+   "b": "Anil Lal Verma",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rahul Pandey",
+   "b": "Sanjay Chand Yadav",
+   "same": false
+  },
+  {
+   "cat": "reordered",
+   "a": "Rajesh Devi Gupta",
+   "b": "Gupta Rajesh Devi",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Shanti Jain",
+   "b": "Shaanti Jain",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Rukhsana Lal Jain",
+   "b": "Rukhsana Lal Jha",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Manoj Devi Verma",
+   "b": "Sanjay Devi Verma",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rohan Joshi",
+   "b": "Naresh Lal Yadav",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Salim Singh",
+   "b": "Md Salim Singh",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Deepak Ansari",
+   "b": "Dipak Ansari",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Shahida Patel",
+   "b": "shahida patel",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Kavita Chand Joshi",
+   "b": "Kavita  Chand  Joshi",
+   "same": true
+  },
+  {
+   "cat": "missing_part",
+   "a": "Rajesh Chand Tiwari",
+   "b": "Rajesh Tiwari",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Sunil Prasad Verma",
+   "b": "S Prasad Verma",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Rekha Devi Ansari",
+   "b": "Rekha D Ansari",
+   "same": true
+  },
+  {
+   "cat": "missing_part",
+   "a": "Sunil Kumar Khan",
+   "b": "Sunil Khan",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Geeta Devi Jain",
+   "b": "Gita Devi Jain",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Usha Devi Siddiqui",
+   "b": "Asha Devi Siddiqui",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Usha Chand Verma",
+   "b": "Asha Chand Verma",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Zoya Lal Gupta",
+   "b": "Rukhsana Chand Ansari",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Rakesh Lal Patel",
+   "b": "Rakesh Lal Patil",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Sita Prasad Singh",
+   "b": "Gita Prasad Singh",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "राधा गुप्ता",
+   "b": "Rohit Gupta",
+   "same": false
+  },
+  {
+   "cat": "reordered",
+   "a": "Neha Chand Siddiqui",
+   "b": "Siddiqui Neha Chand",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Manju Ansari",
+   "b": "Mandu Ansari",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "अजय यादव",
+   "b": "Anita Yadav",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Deepak Lal Mishra",
+   "b": "Deepak Lal. Mishra",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "रमेश शर्मा",
+   "b": "Amit Sharma",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Suresh Lal Gupta",
+   "b": "Sureh Lal Gupta",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Shanti Prasad Rathore",
+   "b": "Usha Prasad Rathore",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Imran Devi Tiwari",
+   "b": "Imran Devi Trivedi",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Savita Lal Mishra",
+   "b": "Seema Lal Mishra",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Anil Chand Rathore",
+   "b": "Anil Rathore",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Poonam Devi Saxena",
+   "b": "Poonam Devi Saxeka",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Laxmi Chand Sharma",
+   "b": "Laxmi Chand Sharmaa",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rohit Kumar Gupta",
+   "b": "Rahul Kumar Gupta",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Farhan Lal Singh",
+   "b": "Farhan Lal. Singh",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Lalit Kumar Ansari",
+   "b": "Ansari Lalit Kumar",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Javed Prasad Mishra",
+   "b": "Imran Prasad Mishra",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Gopal Devi Ansari",
+   "b": "GOPAL DEVI ANSARI",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Savita Qureshi",
+   "b": "Priya Kumar Jain",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Parveen Joshi",
+   "b": "Parvin Joshi",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Shanti Pandey",
+   "b": "Irfan Pandey",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Deepak Chand Joshi",
+   "b": "Meena Pandey",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Shabana Agarwal",
+   "b": "Lalit Prasad Chauhan",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Rafiq Prasad Chauhan",
+   "b": "rafiq prasad chauhan",
+   "same": true
+  },
+  {
+   "cat": "honorific",
+   "a": "Mr. Amit Kapoor",
+   "b": "Amit Kapoor",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "राधा सिंह",
+   "b": "Radha Singh",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "लक्ष्मी यादव",
+   "b": "Laxmi Yadav",
+   "same": true
+  },
+  {
+   "cat": "honorific",
+   "a": "Smt. Sachin Kumar Chauhan",
+   "b": "Sachin Kumar Chauhan",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Zoya Rathore",
+   "b": "Md. Zoya Rathore",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Farhan Prasad Rathore",
+   "b": "Imran Devi Chauhan",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Deepak Chand Siddiqui",
+   "b": "Dipak Chand Siddiqui",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Parveen Prasad Qureshi",
+   "b": "Parvcen Prasad Qureshi",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Naresh Siddiqui",
+   "b": "Meena Siddiqui",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Rohit Lal Khan",
+   "b": "Rhit Lal Khan",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Rukhsana Jain",
+   "b": "Mohd Rukhsana Jain",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Pankaj Lal Pandey",
+   "b": "Pankaj L Pandey",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Manoj Chand Qureshi",
+   "b": "Manoj Cmand Qureshi",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Javed Prasad Saxena",
+   "b": "Javed Pkasad Saxena",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Gita Lal Jain",
+   "b": "Gita Lal Jaine",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Imran Yadav",
+   "b": "Rohan Gupta",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Arun Devi Rathore",
+   "b": "Arun Dcvi Rathore",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Gita Singh",
+   "b": "Shahida Chand Yadav",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Aslam Devi Jain",
+   "b": "Kavita Devi Jain",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Salim Prasad Joshi",
+   "b": "Aslam Prasad Joshi",
+   "same": false
+  },
+  {
+   "cat": "reordered",
+   "a": "Naresh Prasad Jain",
+   "b": "Jain, Naresh Prasad",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Aslam Chauhan",
+   "b": "Md. Aslam Chauhan",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "नेहा शर्मा",
+   "b": "Anil Sharma",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Aslam Khan",
+   "b": "Asalam Khan",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Asha Lal Tiwari",
+   "b": "A Lal Tiwari",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Asif Khan",
+   "b": "Md. Asif Khan",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Poonam Devi Khan",
+   "b": "Posnam Devi Khan",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Shahida Prasad Joshi",
+   "b": "Shahlda Prasad Joshi",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rajesh Lal Chauhan",
+   "b": "Rakesh Lal Chauhan",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "अशोक गुप्ता",
+   "b": "Sita Gupta",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Ajay Lal Mishra",
+   "b": "Javed Lal Tiwari",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Usha Prasad Ansari",
+   "b": "Usha Ansari",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Harish Tiwari",
+   "b": "Suresh Ansari",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "रमेश गुप्ता",
+   "b": "Priya Gupta",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Rafiq Mishra",
+   "b": "Rafiq Mehra",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Laxmi Kumar Pandey",
+   "b": "Lakshmi Kumar Pandey",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Shanti Pandey",
+   "b": "Shanti Pandey",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "कमला यादव",
+   "b": "Usha Yadav",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Poonam Devi Pandey",
+   "b": "Poonam Pandey",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Neha Chand Kapoor",
+   "b": "Nisha Chand Kapoor",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Usha Devi Pandey",
+   "b": "Lalit Kumar Saxena",
+   "same": false
+  },
+  {
+   "cat": "initial",
+   "a": "Asha Prasad Verma",
+   "b": "A. P. Verma",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Sunil Devi Verma",
+   "b": "Verma Sunil Devi",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Babita Prasad Pandey",
+   "b": "B Prasad Pandey",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Anita Prasad Chauhan",
+   "b": "Anita Prasad Chahan",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Sunil Siddiqui",
+   "b": "Ashok Siddiqui",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "पूजा यादव",
+   "b": "Rekha Yadav",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Zoya Prasad Qureshi",
+   "b": "Imran Prasad Qureshi",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Gopal Lal Tiwari",
+   "b": "Sita Lal Jain",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Arun Joshi",
+   "b": "Arun Jodhi",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Naresh Kumar Khan",
+   "b": "Naresh Kmar Khan",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "सविता शर्मा",
+   "b": "Laxmi Sharma",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rajesh Prasad Sharma",
+   "b": "Rakesh Prasad Sharma",
+   "same": false
+  },
+  {
+   "cat": "honorific",
+   "a": "Late Dinesh Khan",
+   "b": "Dinesh Khan",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Sachin Lal Tiwari",
+   "b": "Tiwari Sachin Lal",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Suresh Devi Singh",
+   "b": "Suresh Devl Singh",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Shabana Kumar Saxena",
+   "b": "Rohan Kumar Khan",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Imran Saxena",
+   "b": "Mohamad Imran Saxena",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "सीता सिंह",
+   "b": "Sita Singh",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Riya Tiwari",
+   "b": "Sanjay Tiwari",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Sunita Kumar Pandey",
+   "b": "Suneeta Kumar Pandey",
+   "same": true
+  },
+  {
+   "cat": "missing_part",
+   "a": "Mukesh Lal Saxena",
+   "b": "Mukesh Saxena",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Kamla Devi Singh",
+   "b": "Kamba Devi Singh",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Asif Saxena",
+   "b": "Asif Sethi",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Farhan Chand Siddiqui",
+   "b": "Faraz Chand Siddiqui",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Asif Saxena",
+   "b": "Asif Sethi",
+   "same": false
+  },
+  {
+   "cat": "honorific",
+   "a": "Mr. Gita Kumar Verma",
+   "b": "Gita Kumar Verma",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "राधा कुमार जोशी",
+   "b": "Radha Kumar Joshi",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Radha Lal Joshi",
+   "b": "Radha L Joshi",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Manoj Lal Rathore",
+   "b": "Sanjay Lal Rathore",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Deepak Devi Saxena",
+   "b": "Dipak Devi Saxena",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Naresh Chand Verma",
+   "b": "Naresh Chand Vcrma",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Mohan Prasad Verma",
+   "b": "Verma, Mohan Prasad",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "अजय प्रसाद पांडेय",
+   "b": "Ajay Prasad Pandey",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Shahida Prasad Verma",
+   "b": "Amit Chand Sharma",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Anita Yadav",
+   "b": "Anita Yadau",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "कविता देवी खान",
+   "b": "Kavita Devi Khan",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Neha Lal Qureshi",
+   "b": "Qureshi, Neha Lal",
+   "same": true
+  },
+  {
+   "cat": "missing_part",
+   "a": "Asha Prasad Chauhan",
+   "b": "Asha Chauhan",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Radha Prasad Tiwari",
+   "b": "R Prasad Tiwari",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rukhsana Devi Patel",
+   "b": "Vikram Lal Singh",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Vijay Joshi",
+   "b": "Ajay Joshi",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Babita Gupta",
+   "b": "Rukhsana Gupta",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Laxmi Joshi",
+   "b": "Lakshmi Joshi",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Sanjay Singh",
+   "b": "Sanjay Sinha",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Pooja Prasad Sharma",
+   "b": "Puja Prasad Sharma",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Savita Siddiqui",
+   "b": "Usha Patel",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Sita Chand Yadav",
+   "b": "Neha Chand Yadav",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "कविता सिंह",
+   "b": "Amit Singh",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Sunita Lal Yadav",
+   "b": "Sunita Lal Yadaw",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "सुनील कुमार शर्मा",
+   "b": "Sunil Kumar Sharma",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "सीता देवी अंसारी",
+   "b": "Sita Devi Ansari",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Rohan Devi Kapoor",
+   "b": "Kapoor Rohan Devi",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "राकेश वर्मा",
+   "b": "Vijay Verma",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Kavita Mishra",
+   "b": "Kavita Mehra",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Rajesh Lal Singh",
+   "b": "Rajesh Lai Singh",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rohit Prasad Ansari",
+   "b": "Rahul Prasad Ansari",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Naresh Yadav",
+   "b": "Sunita Yadav",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "राकेश पटेल",
+   "b": "Rakesh Patel",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Sanjay Chand Kapoor",
+   "b": "Sanjay Chand. Kapoor",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Farhan Singh",
+   "b": "Farhan Sinha",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rahul Prasad Sharma",
+   "b": "Priya Ansari",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Seema Chand Khan",
+   "b": "Scema Chand Khan",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Ramesh Kumar Mishra",
+   "b": "Rakesh Kumar Mishra",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Javed Chand Jain",
+   "b": "Javed Chand Jha",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Rahul Yadav",
+   "b": "Vijay Yadav",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Neha Prasad Tiwari",
+   "b": "Sunita Prasad Tiwari",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Manju Rathore",
+   "b": "Rajesh Kumar Gupta",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "रेखा यादव",
+   "b": "Rekha Yadav",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Salim Verma",
+   "b": "Aslam Verma",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Laxmi Kumar Mishra",
+   "b": "Sunita Kumar Mishra",
+   "same": false
+  },
+  {
+   "cat": "different_first",
+   "a": "Rakesh Lal Chauhan",
+   "b": "Rekha Lal Chauhan",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Ramesh Lal Agarwal",
+   "b": "Rakesh Lal Agarwal",
+   "same": false
+  },
+  {
+   "cat": "initial",
+   "a": "Rekha Chand Pandey",
+   "b": "R Chand Pandey",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Shahida Prasad Pandey",
+   "b": "Shahida Prasad Pandy",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Radha Prasad Mishra",
+   "b": "Mishra Radha Prasad",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Rafiq Lal Mishra",
+   "b": "Rafiq Lal Mehra",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Deepak Prasad Yadav",
+   "b": "Deepak Prasad Jadhav",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "रमेश प्रसाद मिश्रा",
+   "b": "Ramesh Prasad Mishra",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Deepak Prasad Yadav",
+   "b": "Deepak Prasad Jadhav",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Asif Ansari",
+   "b": "Md Asif Ansari",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Zoya Kumar Gupta",
+   "b": "Zoya Kumar Kapoor",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Riya Chand Saxena",
+   "b": "Sachin Prasad Yadav",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Zoya Rathore",
+   "b": "Mohd Zoya Rathore",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Anil Devi Rathore",
+   "b": "Sunita Devi Rathore",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Seema Chand Kapoor",
+   "b": "Anil Saxena",
+   "same": false
+  },
+  {
+   "cat": "reordered",
+   "a": "Pankaj Prasad Singh",
+   "b": "Singh, Pankaj Prasad",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Babita Devi Pandey",
+   "b": "Priya Verma",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Mohan Devi Agarwal",
+   "b": "Rohan Devi Agarwal",
+   "same": false
+  },
+  {
+   "cat": "honorific",
+   "a": "Late Parveen Prasad Singh",
+   "b": "Parveen Prasad Singh",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Javed Devi Joshi",
+   "b": "Javed Devi Johri",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Rukhsana Kapoor",
+   "b": "Md. Rukhsana Kapoor",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Farhan Sharma",
+   "b": "Mohammed Farhan Sharma",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "राकेश देवी यादव",
+   "b": "Rakesh Devi Yadav",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rajesh Chand Pandey",
+   "b": "Rakesh Chand Pandey",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "कमला शर्मा",
+   "b": "Pooja Sharma",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Neha Kumar Patel",
+   "b": "Anita Chand Jain",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "राकेश शर्मा",
+   "b": "Sanjay Sharma",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Dinesh Chand Patel",
+   "b": "Naresh Chand Patel",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Salim Singh",
+   "b": "Md. Salim Singh",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Priya Ansari",
+   "b": "Rukhsana Ansari",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Meena Patel",
+   "b": "Meena Patil",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Meena Chand Verma",
+   "b": "Seema Kumar Yadav",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Savita Chauhan",
+   "b": "Savita Chavhan",
+   "same": true
+  },
+  {
+   "cat": "random_typo",
+   "a": "Laxmi Lal Chauhan",
+   "b": "Laxmi Lal Chadhan",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Rukhsana Devi Qureshi",
+   "b": "Rukhsana Devi. Qureshi",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Nasreen Gupta",
+   "b": "Nasreen Kapoor",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "दिनेश वर्मा",
+   "b": "Anita Verma",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "प्रिया शर्मा",
+   "b": "Priya Sharma",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Pooja Lal Gupta",
+   "b": "Puja Lal Gupta",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Mukesh Lal Patel",
+   "b": "M. L. Patel",
+   "same": true
+  },
+  {
+   "cat": "honorific",
+   "a": "Late Anil Lal Siddiqui",
+   "b": "Anil Lal Siddiqui",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "दीपक यादव",
+   "b": "Savita Yadav",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Babita Lal Pandey",
+   "b": "Arif Pandey",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Rekha Prasad Patel",
+   "b": "Reena Prasad Patel",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Anita Chand Khan",
+   "b": "Anita Chand Kapoor",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "कविता यादव",
+   "b": "Usha Yadav",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Pankaj Kumar Saxena",
+   "b": "Pankaj Kumar Sethi",
+   "same": false
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "रोहित यादव",
+   "b": "Mohan Yadav",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Riya Jain",
+   "b": "Riya Jaln",
+   "same": true
+  },
+  {
+   "cat": "honorific",
+   "a": "Mr. Lalit Prasad Mishra",
+   "b": "Lalit Prasad Mishra",
+   "same": true
+  },
+  {
+   "cat": "case_punct",
+   "a": "Deepak Devi Jain",
+   "b": "DEEPAK DEVI JAIN",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Sanjay Jain",
+   "b": "Radha Jain",
+   "same": false
+  },
+  {
+   "cat": "reordered",
+   "a": "Anita Prasad Siddiqui",
+   "b": "Siddiqui, Anita Prasad",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Pooja Chand Rathore",
+   "b": "P Chand Rathore",
+   "same": true
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Irfan Patel",
+   "b": "Md Irfan Patel",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Sarita Mishra",
+   "b": "Imran Mishra",
+   "same": false
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Shanti Lal Singh",
+   "b": "Shaanti Lal Singh",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Pooja Kumar Singh",
+   "b": "Pooja Kumar Sinha",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Imran Kumar Chauhan",
+   "b": "Irfan Kumar Chauhan",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Rajesh Kumar Sharma",
+   "b": "Babita Devi Joshi",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "दीपक तिवारी",
+   "b": "Deepak Tiwari",
+   "same": true
+  },
+  {
+   "cat": "initial",
+   "a": "Anil Prasad Verma",
+   "b": "A. P. Verma",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "मोहन सिंह",
+   "b": "Usha Singh",
+   "same": false
+  },
+  {
+   "cat": "abbreviation",
+   "a": "Mohammad Rafiq Gupta",
+   "b": "Mohamad Rafiq Gupta",
+   "same": true
+  },
+  {
+   "cat": "reordered",
+   "a": "Riya Lal Qureshi",
+   "b": "Qureshi Riya Lal",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Asif Prasad Jain",
+   "b": "Rekha Prasad Jain",
+   "same": false
+  },
+  {
+   "cat": "honorific",
+   "a": "Smt. Shahida Devi Yadav",
+   "b": "Shahida Devi Yadav",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Mukesh Lal Chauhan",
+   "b": "Arif Kumar Kapoor",
+   "same": false
+  },
+  {
+   "cat": "near_surname",
+   "a": "Shanti Kumar Jain",
+   "b": "Shanti Kumar Jha",
+   "same": false
+  },
+  {
+   "cat": "honorific",
+   "a": "Smt. Sunita Kapoor",
+   "b": "Sunita Kapoor",
+   "same": true
+  },
+  {
+   "cat": "spelling_variant",
+   "a": "Amit Lal Singh",
+   "b": "Amit Lal Sing",
+   "same": true
+  },
+  {
+   "cat": "near_surname",
+   "a": "Imran Devi Patel",
+   "b": "Imran Devi Patil",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Mohan Devi Siddiqui",
+   "b": "Mohan Devi Slddiqui",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Arun Chand Siddiqui",
+   "b": "Manju Chand Siddiqui",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Rajesh Prasad Tiwari",
+   "b": "Rajesh Prasad Tiwai",
+   "same": true
+  },
+  {
+   "cat": "devanagari",
+   "a": "रेखा गुप्ता",
+   "b": "Rekha Gupta",
+   "same": true
+  },
+  {
+   "cat": "different_first",
+   "a": "Javed Chand Tiwari",
+   "b": "Vikram Chand Tiwari",
+   "same": false
+  },
+  {
+   "cat": "missing_part",
+   "a": "Naresh Prasad Patel",
+   "b": "Naresh Patel",
+   "same": true
+  },
+  {
+   "cat": "unrelated",
+   "a": "Kamal Chand Sharma",
+   "b": "Radha Kumar Singh",
+   "same": false
+  },
+  {
+   "cat": "unrelated",
+   "a": "Shabana Prasad Khan",
+   "b": "Pankaj Kumar Mishra",
+   "same": false
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Shahida Yadav",
+   "b": "Shahida Yadau",
+   "same": true
+  },
+  {
+   "cat": "missing_part",
+   "a": "Asha Chand Saxena",
+   "b": "Asha Saxena",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Neha Chand Pandey",
+   "b": "Nisha Chand Pandey",
+   "same": false
+  },
+  {
+   "cat": "case_punct",
+   "a": "Kavita Chand Qureshi",
+   "b": "KAVITA CHAND QURESHI",
+   "same": true
+  },
+  {
+   "cat": "devanagari_diff",
+   "a": "अनीता गुप्ता",
+   "b": "Sanjay Gupta",
+   "same": false
+  },
+  {
+   "cat": "honorific",
+   "a": "Late Sachin Joshi",
+   "b": "Sachin Joshi",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Ramesh Tiwari",
+   "b": "Rakesh Tiwari",
+   "same": false
+  },
+  {
+   "cat": "random_typo",
+   "a": "Salim Siddiqui",
+   "b": "Salim Siddisui",
+   "same": true
+  },
+  {
+   "cat": "missing_part",
+   "a": "Vikram Prasad Yadav",
+   "b": "Vikram Yadav",
+   "same": true
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Imran Lal Kapoor",
+   "b": "Irfan Lal Kapoor",
+   "same": false
+  },
+  {
+   "cat": "near_first_name",
+   "a": "Neha Devi Mishra",
+   "b": "Nisha Devi Mishra",
+   "same": false
+  },
+  {
+   "cat": "devanagari",
+   "a": "सुरेश अंसारी",
+   "b": "Suresh Ansari",
+   "same": true
+  },
+  {
+   "cat": "ocr_confusable",
+   "a": "Anil Chand Qureshi",
+   "b": "Anil Chand Qureshl",
+   "same": true
+  }
+ ]
+}
